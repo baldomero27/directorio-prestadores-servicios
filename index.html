@@ -94,6 +94,18 @@
     <!-- Imprimiendo cartas de prestadores de servicios -->
     <section class="grey lighten-4 padding-4">
       <div class="container">
+        <div class="row">
+          <!-- Select -->
+          <div class="input-field col s12 m6">
+            <select>
+              <option value="" disabled selected>Selecciona una categoría</option>
+              <option value="1">Pintura</option>
+              <option value="2">Danza</option>
+              <option value="3">Diseño</option>
+            </select>
+            <label>Selecciona una categoría</label>
+          </div>
+        </div>
         <!-- Primera Fila -->
         <div class="row">
           <!-- Card 1-->
@@ -111,6 +123,15 @@
                   <p><b>abril.alejandra.217038@gmail.com</b></p>
                   <label>Web</label>
                   <p><b>danzayneurodiversidad.webnode.mx</b></p>
+                  <br>
+                  <!-- Call to action buttom -->
+                    <a class="dropdown-trigger waves-effect waves-light btn-small light-blue" href="#" data-target="dropdown1">
+                      <i class="material-icons right">get_app</i>descarga</a>
+                    <!-- Dropdown -->
+                    <ul id='dropdown1' class='dropdown-content'>
+                      <li><a href="#!">VCF</a></li>
+                      <li><a href="#!">IMÁGEN</a></li>
+                    </ul>
               </div>
               <div class="card-action center-align">
                 <a href="#" class="light-blue-text"><i class="fab fa-facebook-f fa-2x"></i></a>
@@ -234,5 +255,13 @@
 
   <script src="js/jquery.min.js" charset="utf-8"></script>
   <script src="js/materialize.min.js" charset="utf-8"></script>
+  <script>
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+  $('.dropdown-trigger').dropdown();
+  </script>
+
+  </script>
   </body>
 </html>
